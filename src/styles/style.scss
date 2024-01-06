@@ -70,7 +70,7 @@ section {
 
 // CSS for Home Market Button
 .btn {
-    padding: 15px 30px;
+    padding: 15px 50px;
     border: 0;
     outline: none;
     border-radius: 30px;
@@ -185,7 +185,7 @@ section {
 
     .footer {
         padding: 20px;
-        max-width: 1500px;
+        max-width: 1300px;
         margin: auto;
 
         .footer-copyright {
@@ -203,18 +203,41 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
     background-image: linear-gradient(0deg, #0f051d 30%, #130749 70%);
 
     .home-heading {
         color: white;
         text-align: center;
-        font-size: 60px;
+        font-size: 65px;
+        line-height: 1.1;
+        -webkit-text-stroke: 0.5px var(--black);
+
+        span {
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-image: linear-gradient(25deg,#2600fc,#ff00ea);
+            color: transparent;
+        }
+    }
+
+    .hero-coin-images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        img {
+            transition: transform 3s;
+        }
+
+        img:hover {
+            transform: rotate(360deg);
+        }
     }
 
     @media screen and (max-width: 600px) {
         .home-heading {
-            font-size: calc(10px + 7vw);
+            font-size: calc(10px + 8vw);
         }
     }
 }
