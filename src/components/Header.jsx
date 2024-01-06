@@ -14,7 +14,7 @@ const Header = () => {
         <li><a href="#market">Crypto Market</a></li>
         <li><a href="#choose-us">Choose Us</a></li>
         <li><a href="#join-discord">Join Discord</a></li>
-        <li><a href="https://www.coingecko.com/" target='_blank'>CoinGecko API</a></li>
+        <li><a href="https://www.coingecko.com/" target='_blank' rel='noreferrer'>CoinGecko API</a></li>
       </ul>
     )
   }
@@ -30,10 +30,10 @@ const Header = () => {
         </div>
 
         <div className='navbar-social-media'>
-          <a href="https://discord.com/" target='_blank'>
+          <a href="https://discord.com/" target='_blank' rel='noreferrer'>
             <img src={Discord} alt="Discord" width={25} height={25} title='Join our Discord' />
           </a>
-          <a href="https://www.linkedin.com/in/mitesh23/" target='_blank'>
+          <a href="https://www.linkedin.com/in/mitesh23/" target='_blank' rel='noreferrer'>
             <img src={Linkedin} alt="Discord" width={25} height={25} title='Mitesh Adelkar' />
           </a>
           <div className='menu-icon'>
