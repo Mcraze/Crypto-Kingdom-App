@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Menu from './Menu';
 import Discord from '../assets/discord.svg';
 import Linkedin from '../assets/linkedin.svg';
 import MenuIcon from '../assets/menu.svg';
@@ -8,16 +9,6 @@ const Header = () => {
 
   const [toggleMenu, settoggleMenu] = useState(false);
 
-  const Menu = () => {
-    return (
-      <ul>
-        <li><a href="#market">Crypto Market</a></li>
-        <li><a href="#choose-us">Choose Us</a></li>
-        <li><a href="#join-discord">Join Discord</a></li>
-        <li><a href="https://www.coingecko.com/" target='_blank' rel='noreferrer'>CoinGecko API</a></li>
-      </ul>
-    )
-  }
   return (
     <header className='header-container'>
       <nav className='navbar'>
