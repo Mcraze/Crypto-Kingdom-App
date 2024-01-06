@@ -96,8 +96,79 @@ section {
 
     .navbar {
         padding: 20px;
-        max-width: 1500px;
+        max-width: 1300px;
         margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .desktop-navigation>ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+
+            a {
+                color: var(--white);
+                font-weight: 600;
+            }
+        }
+
+        .mobile-navigation {
+            position: absolute;
+            top: 85px;
+            left: 20px;
+            right: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: var(--black);
+        }
+
+        .mobile-navigation > ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            a {
+                color: var(--white);
+                font-weight: 600;
+            }
+        }
+
+        .navbar-social-media {
+            display: flex;
+            gap: 15px;
+
+            a {
+                display: flex;
+            }
+
+            img {
+                filter: invert(100%);
+                cursor: pointer;
+            }
+
+        }
+
+        @media screen and (max-width:800px) {
+            .desktop-navigation {
+                display: none;
+            }
+
+            .menu-icon {
+                display: flex;
+            }
+        }
+
+        @media screen and (min-width:800px) {
+            .menu-icon {
+                display: none;
+            }
+            .mobile-navigation {
+                display: none;
+            }
+        }
+
     }
 
     .header-logo a {
@@ -177,17 +248,18 @@ section {
     &.searching img {
         opacity: 1;
     }
+
+    @keyframes rotating {
+        from {
+            transform: translateY(-50%) rotate(0deg);
+        }
+
+        to {
+            transform: translateY(-50%) rotate(360deg);
+        }
+    }
 }
 
-@keyframes rotating {
-    from {
-        transform: translateY(-50%) rotate(0deg);
-    }
-
-    to {
-        transform: translateY(-50%) rotate(360deg);
-    }
-}
 
 .market-heading {
     text-align: center;
@@ -232,27 +304,28 @@ section {
             width: 200px;
         }
     }
-}
 
-.crypto-card:hover {
-    background-color: var(--card-hover);
-}
-
-@media screen and (max-width: 600px) {
-    .crypto-card {
-        flex-direction: column;
+    .crypto-card:hover {
+        background-color: var(--card-hover);
     }
 
-    .crypto-card .crypto-name {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
+    @media screen and (max-width: 600px) {
+        .crypto-card {
+            flex-direction: column;
+        }
 
-    .crypto-card .crypto-prices {
-        align-self: flex-end;
+        .crypto-card .crypto-name {
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .crypto-card .crypto-prices {
+            align-self: flex-end;
+        }
     }
 }
+
 
 // Specific Coins Page CSS
 .coin-heading {
