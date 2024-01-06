@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react'
 import HomeStore from '../stores/HomeStore'
+import coin1 from '../assets/coin1.webp';
+import coin2 from '../assets/coin2.webp';
+import coin3 from '../assets/coin3.webp';
 import SpinnerIcon from '../assets/spinner.svg'
 import classNames from 'classnames';
 import Footer from '../components/Footer';
@@ -18,13 +21,18 @@ const Home = () => {
       <section className='hero-section'>
 
         <div className='home-heading'>
-          <h1>TRACK</h1>
-          <h1>CRYPTO CURRENCY</h1>
+          <h1>TRACK<br/><span>CRYPTO CURRENCY</span></h1>
         </div>
         <div>
           <a href="#market">
             <button className='btn'>Explore Market</button>
           </a>
+        </div>
+
+        <div className='hero-coin-images'>
+          <img src={coin2} alt="coin1" width={50} height={50} />
+          <img src={coin1} alt="coin2" width={50} height={50} />
+          <img src={coin3} alt="coin3" width={50} height={50} />
         </div>
 
       </section>
