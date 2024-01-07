@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react'
-import HomeStore from '../stores/HomeStore'
+import React, { useEffect } from 'react';
+import HomeStore from '../stores/HomeStore';
 import coin1 from '../assets/coin1.webp';
 import coin2 from '../assets/coin2.webp';
 import coin3 from '../assets/coin3.webp';
 import SpinnerIcon from '../assets/spinner.svg'
 import classNames from 'classnames';
 import Footer from '../components/Footer';
+import ChooseUs from '../components/ChooseUs';
 
 const Home = () => {
 
@@ -69,6 +70,10 @@ const Home = () => {
           })}
         </div>
 
+      </section>
+
+      <section id='choose-us'>
+        <ChooseUs/>
       </section>
 
       <Footer />
