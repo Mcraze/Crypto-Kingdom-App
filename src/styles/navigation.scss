@@ -1,0 +1,164 @@
+// Header Styles
+.header-container {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    color: var(--white);
+    background-color: var(--dark-blue);
+
+    .navbar {
+        padding: 20px;
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .desktop-navigation>ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+
+            a {
+                color: var(--white);
+                font-weight: 400;
+            }
+
+            li:hover {
+                text-decoration: 1px underline var(--white);
+                text-underline-offset: 5px;
+            }
+        }
+
+        .mobile-navigation {
+            position: absolute;
+            top: 85px;
+            left: 20px;
+            right: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: var(--black);
+        }
+
+        .mobile-navigation>ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            a {
+                color: var(--white);
+                font-weight: 600;
+            }
+
+            li:hover {
+                text-decoration: 1px underline var(--white);
+                text-underline-offset: 5px;
+            }
+        }
+
+        .navbar-social-media {
+            display: flex;
+            gap: 15px;
+
+            a {
+                display: flex;
+            }
+
+            img {
+                filter: invert(100%);
+                cursor: pointer;
+            }
+
+        }
+
+        @media screen and (max-width:800px) {
+            .desktop-navigation {
+                display: none;
+            }
+
+            .menu-icon {
+                display: flex;
+            }
+        }
+
+        @media screen and (min-width:800px) {
+            .menu-icon {
+                display: none;
+            }
+
+            .mobile-navigation {
+                display: none;
+            }
+        }
+
+    }
+
+    .header-logo a {
+        color: var(--white);
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+// Footer Styles
+.footer-container {
+    color: var(--white);
+    background-color: var(--dark-blue);
+
+    .footer {
+        padding: 30px 20px 10px 20px;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .footer-tagline {
+            font-weight: 400;
+            text-align: center;
+        }
+
+        ul {
+            padding: 20px 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+
+            a {
+                font-weight: 400;
+                color: var(--white);
+            }
+
+            li:hover {
+                text-decoration: 1px underline var(--white);
+                text-underline-offset: 5px;
+            }
+        }
+
+        @media screen and (max-width: 510px) {
+            ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        .footer-copyright {
+            font-weight: 200;
+            font-size: 13px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+
+            div {
+                &:nth-child(2) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}

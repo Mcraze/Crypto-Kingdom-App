@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import HomeStore from '../stores/HomeStore'
+import React, { useEffect } from 'react';
+import HomeStore from '../stores/HomeStore';
 import coin1 from '../assets/coin1.webp';
 import coin2 from '../assets/coin2.webp';
 import coin3 from '../assets/coin3.webp';

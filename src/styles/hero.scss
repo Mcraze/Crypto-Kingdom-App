@@ -1,0 +1,44 @@
+// Home Page Styles
+.hero-section {
+    min-height: calc(100svh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-image: linear-gradient(0deg, #0f051d 30%, #130749 70%);
+
+    .home-heading {
+        color: white;
+        text-align: center;
+        font-size: 65px;
+        line-height: 1.1;
+
+        span {
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-image: linear-gradient(25deg, #2600fc, #ff00ea);
+            color: transparent;
+        }
+    }
+
+    .hero-coin-images {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        img {
+            transition: transform 3s;
+        }
+
+        img:hover {
+            transform: rotate(360deg);
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .home-heading {
+            font-size: calc(10px + 8vw);
+        }
+    }
+}
