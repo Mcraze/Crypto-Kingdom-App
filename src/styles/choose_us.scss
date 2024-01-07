@@ -20,6 +20,10 @@
             border-radius: 10px;
             background-color: var(--white);
             box-shadow: var(--less-shadow);
+
+            p {
+                margin-top: 5px;
+            }
         }
 
         img {
