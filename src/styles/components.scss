@@ -53,3 +53,20 @@
         }
     }
 }
+
+#join-discord {
+    p {
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        button {
+            margin-top: 30px;
+        }
+    }
+}

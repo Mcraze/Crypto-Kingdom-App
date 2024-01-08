@@ -1,12 +1,12 @@
 import React from 'react';
-import '../styles/choose_us.scss';
+import '../styles/components.scss';
 import { one, two, three, four, five, six, mainImage } from '../assets/choose-us-icons';
 
 const ChooseUs = () => {
     return (
         <section id='choose-us'>
             <div>
-                <h1 className='section-heading'>WHY <span>CHOOSE US?</span></h1>
+                <h2 className='section-heading'>WHY <span>CHOOSE US?</span></h2>
                 <div className='choose-us-container'>
                     <div className='inner-container'>
                         <div>

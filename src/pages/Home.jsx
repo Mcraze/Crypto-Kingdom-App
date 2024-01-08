@@ -2,9 +2,8 @@ import React, { useEffect } from 'react';
 import HomeStore from '../stores/HomeStore';
 import { coin1, coin2, coin3, SpinnerIcon } from '../assets/home-icons/index';
 import classNames from 'classnames';
-import '../styles/hero.scss';
-import '../styles/marketplace.scss';
 import ChooseUs from '../components/ChooseUs';
+import JoinDiscord from '../components/JoinDiscord';
 import Footer from '../components/Footer';
 
 const Home = () => {
@@ -47,7 +46,7 @@ const Home = () => {
         </div>
 
         <div className='market-heading'>
-          <h2>{Store.SearchResults ? "Search Results" : "Trending Coins"}</h2>
+          <h2 className='section-heading'>{Store.SearchResults ? <>Search <span>Results</span></> : <>Trending <span>Coins</span></>}</h2>
         </div>
 
         <div className='crypto-card-container'>
@@ -72,6 +71,8 @@ const Home = () => {
       </section>
 
       <ChooseUs />
+
+      <JoinDiscord />
 
       <Footer />
     </main>
