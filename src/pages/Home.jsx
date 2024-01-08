@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 import HomeStore from '../stores/HomeStore';
-import coin1 from '../assets/coin1.webp';
-import coin2 from '../assets/coin2.webp';
-import coin3 from '../assets/coin3.webp';
-import SpinnerIcon from '../assets/spinner.svg'
+import { coin1, coin2, coin3, SpinnerIcon } from '../assets/home-icons/index';
 import classNames from 'classnames';
-import Footer from '../components/Footer';
 import ChooseUs from '../components/ChooseUs';
+import JoinDiscord from '../components/JoinDiscord';
+import Footer from '../components/Footer';
 
 const Home = () => {
 
@@ -22,7 +20,7 @@ const Home = () => {
       <section className='hero-section'>
 
         <div className='home-heading'>
-          <h1>TRACK<br/><span>CRYPTO CURRENCY</span></h1>
+          <h1>TRACK<br /><span>CRYPTO CURRENCY</span></h1>
         </div>
         <div>
           <a href="#market">
@@ -40,7 +38,7 @@ const Home = () => {
 
       <section id='market'>
 
-        <div className={classNames('home-search-input', {searching: Store.SearchingAnimate})}>
+        <div className={classNames('home-search-input', { searching: Store.SearchingAnimate })}>
           <form>
             <input type="text" id='search' value={Store.Query} onChange={Store.setQuery} placeholder='Enter Crypto...' />
           </form>
@@ -48,7 +46,7 @@ const Home = () => {
         </div>
 
         <div className='market-heading'>
-          <h2>{Store.SearchResults ? "Search Results" : "Trending Coins"}</h2>
+          <h2 className='section-heading'>{Store.SearchResults ? <>Search <span>Results</span></> : <>Trending <span>Coins</span></>}</h2>
         </div>
 
         <div className='crypto-card-container'>
@@ -72,9 +70,9 @@ const Home = () => {
 
       </section>
 
-      <section id='choose-us'>
-        <ChooseUs/>
-      </section>
+      <ChooseUs />
+
+      <JoinDiscord />
 
       <Footer />
     </main>

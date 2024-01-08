@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Menu from './Menu';
-import Discord from '../assets/discord.svg';
-import Linkedin from '../assets/linkedin.svg';
-import MenuIcon from '../assets/menu.svg';
-import CloseIcon from '../assets/close.svg';
+import '../styles/navigation.scss';
+import { Discord, Linkedin, MenuIcon, CloseIcon } from '../assets/navbar-icons/index';
 
 const Header = () => {
 

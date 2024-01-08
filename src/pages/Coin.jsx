@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
-import CoinStore from '../stores/CoinStore'
-import { useParams } from 'react-router-dom'
+import React, { useEffect } from 'react';
+import '../styles/coinpage.scss';
+import CoinStore from '../stores/CoinStore';
+import { useParams } from 'react-router-dom';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import Footer from '../components/Footer';
 
